@@ -15,6 +15,7 @@ const Footer = () => {
           <div className="text-sm text-muted-foreground space-y-1">
             <p className="font-bold text-foreground">TEAmo / TEApoio / TEAjudo</p>
             <p>© {new Date().getFullYear()} Projeto TEA - Todos os direitos reservados</p>
+            <p>Desenvolvido por: Mateus e Hélitto</p>
           </div>
         </div>
       </div>
