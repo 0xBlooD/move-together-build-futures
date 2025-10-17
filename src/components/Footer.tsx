@@ -15,7 +15,26 @@ const Footer = () => {
           <div className="text-sm text-muted-foreground space-y-1">
             <p className="font-bold text-foreground">TEAmo / TEApoio / TEAjudo</p>
             <p>© {new Date().getFullYear()} Projeto TEA - Todos os direitos reservados</p>
-            <p>Desenvolvido por: Mateus e Hélitto</p>
+            <p>
+              Desenvolvido por:{" "}
+              <a 
+                href="https://github.com/mateusrodriguees" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="hover:text-tea-red transition-colors underline"
+              >
+                Mateus
+              </a>
+              {" e "}
+              <a 
+                href="https://github.com/0xBlooD" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="hover:text-tea-red transition-colors underline"
+              >
+                Hélitto
+              </a>
+            </p>
           </div>
         </div>
       </div>
