@@ -17,7 +17,7 @@ All colors MUST be HSL.
     --popover: 0 0% 100%;
     --popover-foreground: 222 47% 11%;
 
-    --primary: 217 91% 60%;
+    --primary: 189 65% 72%;
     --primary-foreground: 0 0% 100%;
 
     --secondary: 142 76% 36%;
@@ -38,7 +38,7 @@ All colors MUST be HSL.
 
     --radius: 1rem;
 
-    --tea-blue: 217 91% 60%;
+    --tea-blue: 189 65% 72%;
     --tea-red: 0 84% 60%;
     --tea-green: 142 76% 36%;
     --tea-yellow: 48 96% 53%;
@@ -55,8 +55,8 @@ All colors MUST be HSL.
     --popover: 222 47% 15%;
     --popover-foreground: 210 40% 98%;
 
-    --primary: 217 91% 60%;
-    --primary-foreground: 0 0% 100%;
+    --primary: 189 65% 72%;
+    --primary-foreground: 222 47% 11%;
 
     --secondary: 142 76% 36%;
     --secondary-foreground: 0 0% 100%;
@@ -72,7 +72,7 @@ All colors MUST be HSL.
 
     --border: 217 33% 18%;
     --input: 217 33% 18%;
-    --ring: 217 91% 60%;
+    --ring: 189 65% 72%;
   }
 }
 

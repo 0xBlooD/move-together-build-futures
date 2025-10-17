@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Heart, Users, Trophy, Sparkles } from "lucide-react";
 import Layout from "@/components/Layout";
+import teaHero from "@/assets/tea-hero.png";
 
 const Home = () => {
   return (
@@ -12,36 +13,53 @@ const Home = () => {
         <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxnIGZpbGw9IiMwMDAiIGZpbGwtb3BhY2l0eT0iMC4wMyI+PHBhdGggZD0iTTM2IDEzNGgxMHYxMEgzNnptMjAgMGgxMHYxMEg1NnpNMTYgMTM0aDEwdjEwSDE2em0wLTIwaDEwdjEwSDE2em0yMCAwaDEwdjEwSDM2em0yMCAwaDEwdjEwSDU2em0tNDAgMGgxMHYxMEgxNnptMC0yMGgxMHYxMEgxNnptMjAgMGgxMHYxMEgzNnptMjAgMGgxMHYxMEg1NnptLTQwIDBoMTB2MTBIMTZ6bTAgMjBoMTB2MTBIMTZ6bTIwIDBoMTB2MTBIMzZ6bTIwIDBoMTB2MTBINTZ6bTAgMjBoMTB2MTBINTZ6Ii8+PC9nPjwvZz48L3N2Zz4=')] opacity-40"></div>
         
         <div className="container mx-auto px-4 relative z-10">
-          <div className="max-w-4xl mx-auto text-center space-y-8">
-            <div className="inline-flex items-center gap-2 px-4 py-2 bg-primary/10 rounded-full border border-primary/20 animate-in fade-in slide-in-from-top-4 duration-700">
-              <Sparkles className="w-4 h-4 text-primary" />
-              <span className="text-sm font-medium text-primary">Transformando vidas através do esporte</span>
+          <div className="grid md:grid-cols-2 gap-12 items-center max-w-6xl mx-auto">
+            {/* Text Content */}
+            <div className="space-y-8 text-center md:text-left">
+              <div className="inline-flex items-center gap-2 px-4 py-2 bg-primary/10 rounded-full border border-primary/20 animate-in fade-in slide-in-from-left-4 duration-700">
+                <Sparkles className="w-4 h-4 text-primary" />
+                <span className="text-sm font-medium text-primary">Transformando vidas através do esporte</span>
+              </div>
+              
+              <h1 className="text-4xl md:text-6xl font-bold leading-tight animate-in fade-in slide-in-from-left-6 duration-700 delay-100">
+                Esporte é inclusão.{" "}
+                <span className="bg-gradient-to-r from-primary via-secondary to-accent bg-clip-text text-transparent">
+                  Juntos, transformamos vidas.
+                </span>
+              </h1>
+              
+              <p className="text-lg md:text-xl text-muted-foreground animate-in fade-in slide-in-from-left-8 duration-700 delay-200">
+                Oferecemos atividades esportivas inclusivas para crianças com Transtorno do Espectro Autista (TEA), 
+                promovendo desenvolvimento físico, social e emocional através do esporte.
+              </p>
+              
+              <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start animate-in fade-in slide-in-from-left-10 duration-700 delay-300">
+                <Link to="/inscricoes">
+                  <Button size="lg" className="text-lg px-8 shadow-lg hover:shadow-xl transition-shadow">
+                    Fazer Inscrição
+                  </Button>
+                </Link>
+                <Link to="/doacoes">
+                  <Button size="lg" variant="secondary" className="text-lg px-8 shadow-lg hover:shadow-xl transition-shadow">
+                    <Heart className="w-5 h-5 mr-2" />
+                    Fazer Doação
+                  </Button>
+                </Link>
+              </div>
             </div>
-            
-            <h1 className="text-4xl md:text-6xl font-bold leading-tight animate-in fade-in slide-in-from-top-6 duration-700 delay-100">
-              Esporte é inclusão.{" "}
-              <span className="bg-gradient-to-r from-primary via-secondary to-accent bg-clip-text text-transparent">
-                Juntos, transformamos vidas.
-              </span>
-            </h1>
-            
-            <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto animate-in fade-in slide-in-from-top-8 duration-700 delay-200">
-              Oferecemos atividades esportivas inclusivas para crianças com Transtorno do Espectro Autista (TEA), 
-              promovendo desenvolvimento físico, social e emocional através do esporte.
-            </p>
-            
-            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center animate-in fade-in slide-in-from-top-10 duration-700 delay-300">
-              <Link to="/inscricoes">
-                <Button size="lg" className="text-lg px-8 shadow-lg hover:shadow-xl transition-shadow">
-                  Fazer Inscrição
-                </Button>
-              </Link>
-              <Link to="/doacoes">
-                <Button size="lg" variant="secondary" className="text-lg px-8 shadow-lg hover:shadow-xl transition-shadow">
-                  <Heart className="w-5 h-5 mr-2" />
-                  Fazer Doação
-                </Button>
-              </Link>
+
+            {/* Hero Image */}
+            <div className="relative animate-in fade-in slide-in-from-right-8 duration-700 delay-200">
+              <div className="relative rounded-3xl overflow-hidden shadow-2xl border-4 border-primary/20">
+                <img 
+                  src={teaHero} 
+                  alt="Criança com TEA praticando esportes" 
+                  className="w-full h-auto object-cover"
+                />
+              </div>
+              {/* Decorative elements */}
+              <div className="absolute -top-4 -right-4 w-24 h-24 bg-secondary/20 rounded-full blur-2xl"></div>
+              <div className="absolute -bottom-4 -left-4 w-32 h-32 bg-accent/20 rounded-full blur-2xl"></div>
             </div>
           </div>
         </div>

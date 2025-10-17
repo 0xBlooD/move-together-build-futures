@@ -2,7 +2,7 @@ import { Link, useLocation } from "react-router-dom";
 import { Menu, X } from "lucide-react";
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
-import teaLogo from "@/assets/tea-logo.png";
+import isaLogo from "@/assets/isas-logo.png";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -24,9 +24,9 @@ const Header = () => {
         <div className="flex items-center justify-between">
           <Link to="/" className="flex items-center gap-3 group">
             <img 
-              src={teaLogo} 
-              alt="TEA - Transtorno do Espectro Autista" 
-              className="h-16 w-auto transition-transform group-hover:scale-105"
+              src={isaLogo} 
+              alt="ISAS - Instituto Social Azul Solidário" 
+              className="h-14 w-auto transition-transform group-hover:scale-105"
             />
           </Link>
 
